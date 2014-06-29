@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Letter a time</title>
+        <!-- le bootstrap & jquery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="control.js"></script>
+        <style>
+            #content { width: 780px; margin: 0 auto; }
+            #playerDetails input { width: 300px; }
+            #playerDetails label { width: 150px; text-align: right; }
+            #story { width: 100%; margin-bottom: 35px; }
+            #story textarea { resize: none; height: 300px; border-radius: 4px; }
+            .help { font-size: 10pt; color: grey; }
+            body { padding-bottom: 30px; }
+            legend { padding-top: 30px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" id="content">
+                    <h1>Letter at a time</h1>
+                    <form onsubmit="return false">
+                        <fieldset id="playerDetails">
+                            <legend>Game Details</legend>
+                            <p class="help">Generate a new story ID or enter an existing story ID to join another player!</p>
+                             <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button id="generateStoryID" tabindex="0" class="btn btn-primary" type="button">Generate</button>
+                                </span>
+                                <input placeholder="Enter existing story ID" id="storyIDInput" type="text" class="form-control">
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Story <span id="status" class="label pull-right label-success"></span> </legend>
+                            <p class="help">
+                                <strong>Story ID: </strong><span id="storyIDValue">No story active</span>
+                            </p>
+                            <div id="story" class="input-group input-group-lg">
+                                <textarea spellcheck="false" class="form-control" id="storyContent" tabindex="1"></textarea>
+                            </div>
+                            <hr/>
+                            <p class="help">
+                                <ul>
+                                    <li>Enter in a letter at a time to make a story with the other player(s).</li>
+                                    <li>Hit <code>enter</code> to confirm your letter.</li>
+                                    <li>Punctuation and numbers can only be added <emph>before</emph> you enter a letter.</li>
+                                    <li>Adding a second alphabetic character will revert changes</li>
+                                    <li>Make sure you pass over the game ID to other players so that they can join you.</li>
+                                </ul>
+                            </p>
+                        </fieldset>
+                    </form>
+            </div>
+        </div>
+    </body>
+</html>
