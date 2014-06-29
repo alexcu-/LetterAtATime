@@ -4,6 +4,8 @@
 
 Write a story a letter at a time with friends! Have fun and be creative!
 
+Still in progress!
+
 ## Demonstration
 
 Play a live demo [here](http://alex.paperboxstudios.net/hosted/letter/)
